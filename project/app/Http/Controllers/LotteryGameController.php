@@ -12,8 +12,6 @@ class LotteryGameController extends Controller
     public function show(Request $request): JsonResponse
     {
         $lottery_games_with_matches = LotteryGame::with('gameMatches')
-                ->orderByAsc('start_date')
-                ->orderByAsc('start_time')
                 ->get();
 
         return response()->json([

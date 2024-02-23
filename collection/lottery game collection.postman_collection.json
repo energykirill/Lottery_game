@@ -1,0 +1,1042 @@
+{
+	"info": {
+		"_postman_id": "11675694-5480-4dda-8f46-ac1a800c5a0f",
+		"name": "lottery game collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18505360"
+	},
+	"item": [
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "example123@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Ivan",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Ivanov",
+							"type": "text"
+						},
+						{
+							"key": "is_admin",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "example123@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Ivan",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Ivanov",
+									"type": "text"
+								},
+								{
+									"key": "is_admin",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Feb 2024 06:09:37 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"email\": \"example123@mail.com\",\n        \"first_name\": \"Ivan\",\n        \"last_name\": \"Ivanov\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "example123@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "example123@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Feb 2024 06:11:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImV4YW1wbGUxMjNAbWFpbC5jb20iLCJpZCI6MTB9.RDQOAf0oF0yNdzaf7-dTdkMSqeAOGVmyAWt_XfC2H6g\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update User Information",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImV4YW1wbGUxMjNAbWFpbC5jb20iLCJpZCI6MTB9.RDQOAf0oF0yNdzaf7-dTdkMSqeAOGVmyAWt_XfC2H6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "example123@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Vany",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Ivanov",
+							"type": "text"
+						},
+						{
+							"key": "is_admin",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update User Information",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "example123@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Vany",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Ivanov",
+									"type": "text"
+								},
+								{
+									"key": "is_admin",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Feb 2024 06:14:45 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImV4YW1wbGUxMjNAbWFpbC5jb20iLCJpZCI6MTB9.RDQOAf0oF0yNdzaf7-dTdkMSqeAOGVmyAWt_XfC2H6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/users/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete User",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/users/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Feb 2024 06:17:09 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get lottery games",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/lottery_games",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"lottery_games"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get lottery games",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/lottery_games",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"lottery_games"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Feb 2024 06:52:59 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"loto\",\n            \"gamer_count\": 2,\n            \"reward_points\": 2,\n            \"game_matches\": [\n                {\n                    \"id\": 1,\n                    \"game_id\": 1,\n                    \"start_date\": \"2024-02-24\",\n                    \"start_time\": \"15:00:00\",\n                    \"winner_id\": 4,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 2,\n                    \"game_id\": 1,\n                    \"start_date\": \"2024-02-26\",\n                    \"start_time\": \"18:00:00\",\n                    \"winner_id\": 4,\n                    \"is_finished\": true\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"name\": \"esse\",\n            \"gamer_count\": 2,\n            \"reward_points\": 3,\n            \"game_matches\": []\n        },\n        {\n            \"id\": 3,\n            \"name\": \"omnis\",\n            \"gamer_count\": 5,\n            \"reward_points\": 6,\n            \"game_matches\": []\n        },\n        {\n            \"id\": 4,\n            \"name\": \"magnam\",\n            \"gamer_count\": 1,\n            \"reward_points\": 7,\n            \"game_matches\": []\n        },\n        {\n            \"id\": 5,\n            \"name\": \"consequatur\",\n            \"gamer_count\": 5,\n            \"reward_points\": 4,\n            \"game_matches\": []\n        },\n        {\n            \"id\": 6,\n            \"name\": \"dolor\",\n            \"gamer_count\": 9,\n            \"reward_points\": 1,\n            \"game_matches\": []\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Create lottery game match",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImV4YW1wbGUxMjNAbWFpbC5jb20iLCJpZCI6MTB9.RDQOAf0oF0yNdzaf7-dTdkMSqeAOGVmyAWt_XfC2H6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "game_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "start_date",
+							"value": "2024-02-26",
+							"type": "text"
+						},
+						{
+							"key": "start_time",
+							"value": "18:00:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/lottery_game_matches",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"lottery_game_matches"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create lottery game match",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "game_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2024-02-26",
+									"type": "text"
+								},
+								{
+									"key": "start_time",
+									"value": "18:00:00",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/lottery_game_matches",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"lottery_game_matches"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Feb 2024 06:38:26 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"game_id\": \"1\",\n        \"start_date\": \"2024-02-26\",\n        \"start_time\": \"18:00:00\",\n        \"id\": 2\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Register user for match",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImV4YW1wbGUxMjNAbWFpbC5jb20iLCJpZCI6MTB9.RDQOAf0oF0yNdzaf7-dTdkMSqeAOGVmyAWt_XfC2H6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "match_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/lottery_game_match_users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"lottery_game_match_users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register user for match",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "match_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/lottery_game_match_users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"lottery_game_match_users"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Feb 2024 06:50:13 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"This user is registered for the match\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Finish lottery game match",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImV4YW1wbGUxMjNAbWFpbC5jb20iLCJpZCI6MTB9.RDQOAf0oF0yNdzaf7-dTdkMSqeAOGVmyAWt_XfC2H6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "is_finished",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/lottery_game_matches/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"lottery_game_matches",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Finish lottery game match",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "is_finished",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/lottery_game_matches/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"lottery_game_matches",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Feb 2024 06:50:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Match is finished\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get lottery game match by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/lottery_game_matches?lottery_game_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"lottery_game_matches"
+					],
+					"query": [
+						{
+							"key": "lottery_game_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get lottery game match by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/lottery_game_matches?lottery_game_id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"lottery_game_matches"
+							],
+							"query": [
+								{
+									"key": "lottery_game_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Feb 2024 06:53:04 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"game_id\": 1,\n            \"start_date\": \"2024-02-24\",\n            \"start_time\": \"15:00:00\",\n            \"winner_id\": 4,\n            \"is_finished\": true\n        },\n        {\n            \"id\": 2,\n            \"game_id\": 1,\n            \"start_date\": \"2024-02-26\",\n            \"start_time\": \"18:00:00\",\n            \"winner_id\": 4,\n            \"is_finished\": true\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImV4YW1wbGUxMjNAbWFpbC5jb20iLCJpZCI6MTB9.RDQOAf0oF0yNdzaf7-dTdkMSqeAOGVmyAWt_XfC2H6g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.27"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Feb 2024 06:53:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 6,\n            \"first_name\": \"Dr. Randal Kshlerin\",\n            \"last_name\": \"Blick\",\n            \"email\": \"wcruickshank@example.com\",\n            \"is_admin\": false,\n            \"points\": 0,\n            \"win_matches\": []\n        },\n        {\n            \"id\": 7,\n            \"first_name\": \"Eliza Keebler\",\n            \"last_name\": \"Wiegand\",\n            \"email\": \"cielo.hill@example.com\",\n            \"is_admin\": false,\n            \"points\": 0,\n            \"win_matches\": []\n        },\n        {\n            \"id\": 8,\n            \"first_name\": \"Billy Gorczany\",\n            \"last_name\": \"Blanda\",\n            \"email\": \"susanna.monahan@example.com\",\n            \"is_admin\": false,\n            \"points\": 0,\n            \"win_matches\": []\n        },\n        {\n            \"id\": 9,\n            \"first_name\": \"Zora Willms\",\n            \"last_name\": \"Hudson\",\n            \"email\": \"gorczany.lauretta@example.com\",\n            \"is_admin\": false,\n            \"points\": 0,\n            \"win_matches\": []\n        },\n        {\n            \"id\": 10,\n            \"first_name\": \"Ivan\",\n            \"last_name\": \"Ivanov\",\n            \"email\": \"example123@mail.com\",\n            \"is_admin\": true,\n            \"points\": 0,\n            \"win_matches\": []\n        },\n        {\n            \"id\": 4,\n            \"first_name\": \"Vany\",\n            \"last_name\": \"Ivanov\",\n            \"email\": \"example123@mail.com\",\n            \"is_admin\": true,\n            \"points\": 2,\n            \"win_matches\": [\n                {\n                    \"id\": 1,\n                    \"game_id\": 1,\n                    \"start_date\": \"2024-02-24\",\n                    \"start_time\": \"15:00:00\",\n                    \"winner_id\": 4,\n                    \"is_finished\": true\n                },\n                {\n                    \"id\": 2,\n                    \"game_id\": 1,\n                    \"start_date\": \"2024-02-26\",\n                    \"start_time\": \"18:00:00\",\n                    \"winner_id\": 4,\n                    \"is_finished\": true\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}

@@ -14,7 +14,7 @@ class LotteryGameMatchController extends Controller
         $this->validate($request, [
             'game_id'    => 'required|integer',
             'start_date' => 'required|date|after:yesterday',
-            'start_time' => 'required|time',
+            'start_time' => 'required',
         ]);
 
         $created_match = LotteryGameMatch::create([
